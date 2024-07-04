@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+    MiniStore
+  </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- main css file -->
+  <link rel="stylesheet" href="./CSS/style.css">
+  <!-- main js file -->
+  <!-- <script src="JS/script.js"></script> -->
+  <!--Ion-icons js-->
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/7.1.2/esm/ionicons.min.js"
+    integrity="sha512-2ySmquu6HK3CAvwLllh0R8K8buFPMZsUwWLZIlB7WW8c8ilUtoNyhsmEsQn2U0IV1USr2Oc/9DJzlr4cxAbuxA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- lordicons js -->
+  <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <!-----------Header------------------>
+  <div class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png" width="170px" height="100px"></a>
+        </div>
+        <!--search bar -->
+        <input id="search_bar" type="text" placeholder="What are you looking for?...">
+        <!--search icon-->
+        <lord-icon src="https://cdn.lordicon.com/xfftupfv.json" trigger="hover" colors="primary:#ffffff" state="hover"
+          style="width:40px;height:40px" id="search_btn">
+        </lord-icon>
+        <nav>
+          <ul id="MenuItems">
+            <!-- Home -->
+            <li><a href="index.html" data-title="Home"><lord-icon src="https://cdn.lordicon.com/osuxyevn.json"
+                  trigger="hover" colors="primary:#ffffff" state="hover-3" style="width:40px;height:40px"></lord-icon>
+              </a></li>
+            <!-- About Us -->
+            <li><a href="aboutus.html" data-title="About Us"><lord-icon src="https://cdn.lordicon.com/amascaoj.json"
+                  trigger="hover" colors="primary:#ffffff" style="width:40px;height:40px">
+                </lord-icon>
+              </a></li>
+            <!-- Contact Us -->
+            <li><a href="contactus.html" data-title="Contact Us"><lord-icon src="https://cdn.lordicon.com/hpivxauj.json"
+                  trigger="hover" colors="primary:#ffffff" style="width:40px;height:40px">
+                </lord-icon>
+              </a></li>
+            <!-- Categories -->
+            <li><a href="#categories" data-title="Categories"><lord-icon src="https://cdn.lordicon.com/svbmmyue.json"
+                  trigger="hover" colors="primary:#ffffff" state="hover" style="width:40px;height:40px">
+                </lord-icon>
+              </a></li>
+            <!-- Sign Up / Log In -->
+            <li><a href="account.html" data-title="Account"><lord-icon src="https://cdn.lordicon.com/bhfjfgqz.json"
+                  trigger="hover" colors="primary:#ffffff" state="hover" style="width:40px;height:40px">
+                </lord-icon>
+              </a></li>
+          </ul>
+        </nav>
+        <!-- Cart  -->
+        <a href="cart.html"><lord-icon src="https://cdn.lordicon.com/medpcfcy.json" trigger="hover"
+            colors="primary:#ffffff" state="hover-1" style="width:40px;height:45px">
+          </lord-icon></a>
+        <!-- Menu-Icon -->
+        <lord-icon src="https://cdn.lordicon.com/jtqpkhoh.json" trigger="hover"
+          colors="primary:#ffffff,secondary:#08a88a" style="width:40px;height:40px" class="menu-icon"
+          onclick="menutoggle()">
+        </lord-icon>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!--------------Ads Content-------------->
+  <div class="slideshow-container">
+
+    <!-- Full-width images  -->
+    <div class="mySlides fade">
+      <img src="images/ad-1.png" style="width:100%" id="img">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/ad-2.png" style="width:100%" id="img">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/ad-3.png" style="width:100%" id="img">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/ad-4.png" style="width:100%" id="img">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/ad-5.png" style="width:100%" id="img">
+    </div>
+
+    <!-- Next and previous arrows -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+
+
+
+  <!-------Categories Content--------->
+  <div class="small-container" id="categories">
+    <h2 class="title">Top Categories</h2>
+    <div class="row">
+      <div class="col-7"><a href="tv.html">
+        <img src="images/category-3.png">
+        <p>Televisions</p>
+        </a>
+      </div>
+      <div class="col-7"><a href="ac.html">
+        <img src="images/category-2.png">
+        <p>Air Conditioners</p>
+      </a>
+      </div>
+      <div class="col-7"><a href="washingmachine.html">
+        <img src="images/category-1.png">
+        <p>Washing Machines</p>
+      </a>
+      </div>
+      <div class="col-7"><a href="laptops.html">
+          <img src="images/category-4.png">
+          <p>Laptops</p>
+        </a>
+      </div>
+      <div class="col-7"><a href="mobiles.html">
+        <img src="images/mobile.jpg">
+        <p>Smartphones</p>
+      </a>
+      </div>
+      <div class="col-7"><a href="fridge.html">
+        <img src="images/category-6.png">
+        <p>Refrigerators</p></a>
+      </div>
+      <div class="col-7"><a href="wearables.html">
+        <img src="images/category-7.png">
+        <p>Wearables</p></a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!----------------Popular Brands--------------------->
+  <div class="brands">
+    <div class="small-container">
+      <h2 class="title">Associated Brands</h2>
+      <div class="row">
+        <div class="col-6 logo">
+          <a href="ac.html"><img src="images/logo-godrej.png" width="100%"></a>
+        </div>
+        <div class="col-6 logo"><a href="mobiles.html">
+          <img src="images/logo-oppo.png"></a>
+        </div>
+        <div class="col-6">
+          <a href="laptops.html"><img src="images/logo-dell.png"></a>
+        </div>
+        <div class="col-6" id="apple"><a href="mobiles.html">
+          <img src="images/logo-applee.png"></a>
+        </div>
+        <div class="col-6 logo" id="sony"><a href="SonyTV.html">
+          <img src="images/logo-sony.png"></a>
+        </div>
+        <div class="col-6 logo" id="Samsung"><a href="samsung.html">
+          <img src="images/logo-samsung.png" ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!--------------------Testimonials---------------------->
+  <div class="testimonial">
+    <div class="small-container1">
+      <div class="row1">
+        <div class="col-3">
+          <i class="fa fa-quote-left"></i>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vitae cum autem, dolores harum non, beatae
+            optio repudiandae nobis dolor incidunt numquam.
+          </p>
+          <div class="rating">
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+          </div>
+          <img src="images/user-1.png">
+          <h3>Sean Parker</h3>
+        </div>
+        <div class="col-3">
+          <i class="fa fa-quote-left"></i>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vitae cum autem, dolores harum non, beatae
+            optio repudiandae nobis dolor incidunt numquam.
+          <div class="rating">
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+          </div>
+          <img src="images/user-2.png">
+          <h3>Mike Smith</h3>
+        </div>
+        <div class="col-3">
+          <i class="fa fa-quote-left"></i>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vitae cum autem, dolores harum non, beatae
+            optio repudiandae nobis dolor incidunt numquam.
+          </p>
+          <div class="rating">
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+          </div>
+          <img src="images/user-3.png">
+          <h3>Mable Joe</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!----------Footer-------------------->
+  <footer>
+    <div class="container1">
+      <div class="content_footer">
+        <div class="profile">
+          <div class="logo_area">
+            <img src="images/logo.png">
+            <!-- <span class="logo_name">MiniStore</span> -->
+          </div>
+          <div class="desc_area">
+            <p style="color: #fff;">
+              Ministore, with its user-friendly interface and a wide range of cutting-edge tech gadgets,
+              home appliances, provides customers
+              with a smooth shopping experience, making it a go-to destination for tech enthusiasts and
+              consumers alike.
+            </p>
+          </div>
+          <div class="social_media">
+            <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="#"><i class='bx bxl-facebook-square'></i></a>
+            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="#"><i class='bx bxl-github'></i></a>
+          </div>
+        </div>
+        <div class="service_area">
+          <ul class="service_header">
+            <li class="service_name">Services</li>
+            <li><a href="#">Buying Guide</a></li>
+            <li><a href="#">Payment Policy</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+          <ul class="service_header">
+            <li class="service_name">Locations</li>
+            <li><a href="#">Delhi</a></li>
+            <li><a href="#">Mumbai</a></li>
+            <li><a href="#">Dehradun</a></li>
+            <li><a href="#">Punjab</a></li>
+          </ul>
+          <ul class="service_header">
+            <li class="service_name">Get to know Us</li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Join Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="footer_bottom">
+        <div class="copy_right">
+          <span>&copy; 2022 MiniStore</span>
+        </div>
+        <div class="tou">
+          <a href="#">Terms of Use &nbsp; |</a>
+          <a href="#">Privacy Policy &nbsp; | </a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+  <!-- Image Slider JS -->
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+
+
+  <!--js for toggle menu-->
+  <script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle() {
+      if (MenuItems.style.maxHeight == "0px") {
+        MenuItems.style.maxHeight = "300px";
+      }
+      else {
+        MenuItems.style.maxHeight = "0px";
+      }
+    }
+  </script>
+
+
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+
+</html>

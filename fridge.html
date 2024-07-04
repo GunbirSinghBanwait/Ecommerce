@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        MiniStore
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- main css file -->
+    <link rel="stylesheet" href="./CSS/fridge.css">
+    <!-- main js file -->
+    <!-- <script src="JS/script.js"></script> -->
+    <!--Ion-icons js-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- lordicons js -->
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-----------Header------------------>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="170px" height="100px"></a>
+                </div>
+                <!--search bar -->
+                <input id="search_bar" type="text" placeholder="What are you looking for?...">
+                <!--search icon-->
+                <lord-icon src="https://cdn.lordicon.com/xfftupfv.json" trigger="hover" colors="primary:#ffffff"
+                    state="hover" style="width:40px;height:40px" id="search_btn">
+                </lord-icon>
+                <nav>
+                    <ul id="MenuItems">
+                        <!-- Home -->
+                        <li><a href="index.html" data-title="Home"><lord-icon
+                                    src="https://cdn.lordicon.com/osuxyevn.json" trigger="hover"
+                                    colors="primary:#ffffff" state="hover-3" style="width:40px;height:40px"></lord-icon>
+                            </a></li>
+                        <!-- About Us -->
+                        <li><a href="aboutus.html" data-title="About Us"><lord-icon
+                                    src="https://cdn.lordicon.com/amascaoj.json" trigger="hover"
+                                    colors="primary:#ffffff" style="width:40px;height:40px">
+                                </lord-icon>
+                            </a></li>
+                        <!-- Contact Us -->
+                        <li><a href="contactus.html" data-title="Contact Us"><lord-icon
+                                    src="https://cdn.lordicon.com/hpivxauj.json" trigger="hover"
+                                    colors="primary:#ffffff" style="width:40px;height:40px">
+                                </lord-icon>
+                            </a></li>
+                        <!-- Categories -->
+                        <li><a href="index.html#categories" data-title="Categories"><lord-icon
+                                    src="https://cdn.lordicon.com/svbmmyue.json" trigger="hover"
+                                    colors="primary:#ffffff" state="hover" style="width:40px;height:40px">
+                                </lord-icon>
+                            </a></li>
+                        <!-- Sign Up / Log In -->
+                        <li><a href="account.html" data-title="Account"><lord-icon
+                                    src="https://cdn.lordicon.com/bhfjfgqz.json" trigger="hover"
+                                    colors="primary:#ffffff" state="hover" style="width:40px;height:40px">
+                                </lord-icon>
+                            </a></li>
+                    </ul>
+                </nav>
+                <!-- Cart  -->
+                <a href="cart.html"><lord-icon src="https://cdn.lordicon.com/medpcfcy.json" trigger="hover"
+                        colors="primary:#ffffff" state="hover-1" style="width:40px;height:45px">
+                    </lord-icon></a>
+                <!-- Menu-Icon -->
+                <lord-icon src="https://cdn.lordicon.com/jtqpkhoh.json" trigger="hover"
+                    colors="primary:#ffffff,secondary:#08a88a" style="width:40px;height:40px" class="menu-icon"
+                    onclick="menutoggle()">
+                </lord-icon>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------Demo Page---------------->
+
+
+    <!-- <div class="main-up">
+        <img src="images\washingmachine\img.png">
+        <h1>Washing Machines</h1>
+    </div> -->
+    <div class="main-up">
+        <!-- <video src="videos/machine.mp4" autoplay muted loop></video> -->
+        <img src="images/frij/frij.png" alt="">
+        <!-- <h1>Washing <br>Machines</h1> -->
+    </div>
+    <div class="container2">
+        <h1>Top Trending Deals</h1>
+        <div class="grid div-one">
+            <div class="card">
+                <div class="product-img " id="lg"><img
+                        src="images/frij/frij1.png"
+                        alt="LG 242 Ltr, Smart Inverter Compressor, DoorCooling+™, Smart Diagnosis™, Shiny Steel Finish, Frost-Free Double Door Refrigerator"
+                        title="LG 242 Ltr, Smart Inverter Compressor, DoorCooling+™, Smart Diagnosis™, Shiny Steel Finish, Frost-Free Double Door Refrigerator">
+                </div>
+                <div class="product-info">
+                    <p class="product-title">LG 242 Ltr, Smart Inverter Compressor, DoorCooling+™, Smart Diagnosis™, Shiny Steel Finish, Frost-Free Double Door Refrigerator</p>
+                    <div class="cp-price">
+                        <span class="new-price">
+                            <span class="amount">₹25,490.00</span>
+                        </span>
+                        <span class="old-price">
+                            <span class="amount">₹37,099.00</span>
+                        </span>
+                    </div>
+                    <div class="cp-rating">
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                        </div>
+                    <ion-icon name="heart-outline" class="heart" data-toggle="heart8" title="Save for Later"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product-img"><img
+                        src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1692278268/Croma%20Assets/Large%20Appliances/Refrigerator/Images/269688_eybodd.png?tr=w-640"
+                        sizes="(max-width: 400px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                        alt="SAMSUNG 183 Litres 3 Star Direct Cool Single Door Refrigerator with Anti-Bacterial Gasket (RR20C1723R8/HL, Blooming Saffron Red)"
+                        title="SAMSUNG 183 Litres 3 Star Direct Cool Single Door Refrigerator with Anti-Bacterial Gasket (RR20C1723R8/HL, Blooming Saffron Red)">
+                </div>
+                <div class="product-info">
+                    <p class="product-title">SAMSUNG 183 Litres 3 Star Direct Cool Single Door Refrigerator with Anti-Bacterial Gasket (RR20C1723R8/ HL , Blooming Saffron Red)</p>
+                    <div class="cp-price"><span class="new-price"><span class="amount">₹14,880.00 </span></span><span
+                            class="old-price"><span class="amount">₹19,999.00</span></span></div>
+                    <div class="cp-rating">
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                        </div>
+                    <ion-icon name="heart-outline" class="heart" data-toggle="heart8" title="Save for Later"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product-img"><img
+                        src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1692278210/Croma%20Assets/Large%20Appliances/Refrigerator/Images/269867_cgc3vh.png?tr=w-640"
+                        sizes="(max-width: 400px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                        alt="Whirlpool Intellifresh Pro 278 231 Litres 2 Star Frost Free Double Door Convertible Refrigerator with 6th Sense Technology (Grey)"
+                        title="Whirlpool Intellifresh Pro 278 231 Litres 2 Star Frost Free Double Door Convertible Refrigerator with 6th Sense Technology (Grey)">
+                </div>
+                <div class="product-info">
+                    <p class="product-title">Whirlpool Intellifresh Pro 278 231 Litres 2 Star Frost Free Double Door Convertible Refrigerator with 6th Sense Technology (Grey)</p>
+                    <div class="cp-price"><span class="new-price"><span class="amount">₹25,790.00 </span></span><span
+                            class="old-price"><span class="amount">₹34,400.00</span></span></div>
+                    <div class="cp-rating">
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                        </div>
+                    <ion-icon name="heart-outline" class="heart" data-toggle="heart8" title="Save for Later"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product-img"><img
+                        src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1692278421/Croma%20Assets/Large%20Appliances/Refrigerator/Images/269817_cv9cdi.png?tr=w-640"
+                        sizes="(max-width: 400px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                        alt="SAMSUNG 236 Litres 2 Star Frost Free Double Door Refrigerator with Toughened Glass Shelves (RT28C3452UT/HL, Pebble Blue)"
+                        title="SAMSUNG 236 Litres 2 Star Frost Free Double Door Refrigerator with Toughened Glass Shelves (RT28C3452UT/HL, Pebble Blue)">
+                </div>
+                <div class="product-info">
+                    <p class="product-title">SAMSUNG 236 Litres 2 Star Frost Free Double Door Refrigerator with Toughened Glass Shelves (RT28C3452UT/HL, Pebble Blue)</p>
+                    <div class="cp-price"><span class="new-price"><span class="amount">₹23,990.00 </span></span><span
+                            class="old-price"><span class="amount">₹33,999.00</span></span></div>
+                    <div class="cp-rating">
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                        </div>
+                    <ion-icon name="heart-outline" class="heart" data-toggle="heart8" title="Save for Later"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <h1>Limited Deals</h1>
+        <div class="grid div-two">
+            <div class="card">
+                <div class="product-img"><img
+                        src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1623318281/Croma%20Assets/Large%20Appliances/Refrigerator/Images/234873_u2hjgn.png?tr=w-640"
+                        alt="LG 889 Litres 2 Star Frost Free French Door Smart Wi-Fi Enabled Refrigerator with InstaView Door-in-Door (GR-X31FMQHL, Matte Black)"
+                        title="LG 889 Litres 2 Star Frost Free French Door Smart Wi-Fi Enabled Refrigerator with InstaView Door-in-Door (GR-X31FMQHL, Matte Black)">
+                </div>
+                <div class="product-info">
+                    <p class="product-title">LG 889 Litres 2 Star Frost Free French Door Smart Wi-Fi Enabled Refrigerator with InstaView Door-in-Door (GR-X31FMQHL, Matte Black)</p>
+                    <div class="cp-price">
+                        <span class="new-price">
+                            <span class="amount">₹2,92,890.00</span>
+                        </span>
+                        <span class="old-price">
+                            <span class="amount">₹3,34,949.00</span>
+                        </span>
+                    </div>
+                    <div class="cp-rating">
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                        </div>
+                    <ion-icon name="heart-outline" class="heart" data-toggle="heart8" title="Save for Later"></ion-icon>
+                    <p>Deal ends in: <span id="countdown1">02:12:22</span></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product-img"><img
+                        src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1673260267/Croma%20Assets/Large%20Appliances/Refrigerator/Images/249320_0_t58imi.png?tr=w-640"
+                        alt="LG 423 Litres 3 Star Frost Free Double Door Smart Wi-Fi Enabled Refrigerator with Fresh O Zone (GL-T422VESX.DESZEB, Ebony Sheen)"
+                        title="LG 423 Litres 3 Star Frost Free Double Door Smart Wi-Fi Enabled Refrigerator with Fresh O Zone (GL-T422VESX.DESZEB, Ebony Sheen)">
+                </div>
+                <div class="product-info">
+                    <p class="product-title">LG 423 Litres 3 Star Frost Free Double Door Smart Wi-Fi Enabled Refrigerator with Fresh O Zone (GL-T422VESX, DESZEB, Ebony Sheen)</p>
+                    <div class="cp-price"><span class="new-price"><span class="amount">₹52,890.00 </span></span><span
+                            class="old-price"><span class="amount"> ₹69,299.00</span></span></div>
+                    <div class="cp-rating">
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                        </div>
+                    <ion-icon name="heart-outline" class="heart" data-toggle="heart8" title="Save for Later"></ion-icon>
+                    <p>Deal ends in: <span id="countdown2">03:30:45</span></p>
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="product-img"><img
+                        src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1666178163/Croma%20Assets/Large%20Appliances/Refrigerator/Images/263076_l21swi.png?tr=w-640"
+                        alt="Electrolux UltimateTaste 700 524 Litres Frost Free French Door Refrigerator with NutriFresher Inverter Compressor (EHE5224C-A NIN, Arctic Silver)"
+                        title="Electrolux UltimateTaste 700 524 Litres Frost Free French Door Refrigerator with NutriFresher Inverter Compressor (EHE5224C-A NIN, Arctic Silver)">
+                </div>
+                <div class="product-info">
+                    <p class="product-title">Electrolux UltimateTaste 700 524 Litres Frost Free French Door Refrigerator with NutriFresher Inverter Compressor (EHE5224C-A NIN, Arctic Silver)</p>
+                    <div class="cp-price"><span class="new-price"><span class="amount">₹84,590.00 </span></span><span
+                            class="old-price"><span class="amount">₹1,58,990.00</span></span></div>
+                    <div class="cp-rating">
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                        </div>
+                    <ion-icon name="heart-outline" class="heart" data-toggle="heart8" title="Save for Later"></ion-icon>
+                    <p>Deal ends in: <span id="countdown3">01:45:15</span></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product-img"><img
+                        src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1637223388/Croma%20Assets/Large%20Appliances/Refrigerator/Images/242239_qigwuw.png?tr=w-640"
+                        alt="Hisense 411 Litres 2 Star Frost Free Double Door Bottom Mount Refrigerator with Surround Cooling System (RT488N4ASB2, Stainless Steel)"
+                        title="Hisense 411 Litres 2 Star Frost Free Double Door Bottom Mount Refrigerator with Surround Cooling System (RT488N4ASB2, Stainless Steel)">
+                    <div class="product-info">
+                        <p class="product-title">Hisense 411 Litres 2 Star Frost Free Double Door Bottom Mount Refrigerator with Surround Cooling System (RT488N4ASB2, Stainless Steel)</p>
+                        <div class="cp-price"><span class="new-price"><span class="amount">₹26,994.00
+                                </span></span><span class="old-price"><span class="amount">₹41,990.00</span></span>
+                        </div>
+                        <div class="cp-rating">
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                            <ion-icon name="star" class="star"></ion-icon>
+                        </div>
+                        <ion-icon name="heart-outline" class="heart" data-toggle="heart8"
+                            title="Save for Later"></ion-icon>
+                        <p>Deal ends in: <span id="countdown4">04:05:10</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <br>
+        <br>
+
+
+
+        <h1>Pick Your Refrigerator Brand</h1>
+        <div class="scroll-container">
+            <a href=""><img src="images/frij/whirlpool.png"
+                    sizes="50vw" alt="Whirlpool Refrigerators" title="Whirlpool Refrigerators"></a>
+            <a href=""><img src="images/frij/samsung.png"
+                    sizes="50vw" alt="Samsung Refrigerators" title="Samsung Refrigerators"></a>
+            <a href="">
+                <img src="images/frij/hisense.png" sizes="50vw" alt="Hisense Refrigerators" title="Hisense Refrigerators">
+            </a>
+            <a href=""><img src="images/frij/liebherr.png"
+                    sizes="50vw" alt="Liebherr Refrigerators" title="Liebherr Refrigerators"></a>
+        </div>
+
+
+    </div>
+
+    <h2 class="guide">Need help in buying Refrigerator? Refer to our <a href="fridgedemo.html">Buying Guide</a></h2>
+
+    </div>
+
+
+
+    <!----------Footer-------------------->
+    <footer>
+        <div class="container1">
+            <div class="content_footer">
+                <div class="profile">
+                    <div class="logo_area">
+                        <img src="images/logo.png">
+                        <!-- <span class="logo_name">MiniStore</span> -->
+                    </div>
+                    <div class="desc_area">
+                        <p style="color: #fff;">
+                            Ministore, with its user-friendly interface and a wide range of cutting-edge tech gadgets,
+                            home appliances, provides customers
+                            with a smooth shopping experience, making it a go-to destination for tech enthusiasts and
+                            consumers alike.
+                        </p>
+                    </div>
+                    <div class="social_media">
+                        <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                        <a href="#"><i class='bx bxl-facebook-square'></i></a>
+                        <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                        <a href="#"><i class='bx bxl-github'></i></a>
+                    </div>
+                </div>
+                <div class="service_area">
+                    <ul class="service_header">
+                        <li class="service_name">Services</li>
+                        <li><a href="#">Buying Guide</a></li>
+                        <li><a href="#">Payment Policy</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                    <ul class="service_header">
+                        <li class="service_name">Locations</li>
+                        <li><a href="#">Delhi</a></li>
+                        <li><a href="#">Mumbai</a></li>
+                        <li><a href="#">Dehradun</a></li>
+                        <li><a href="#">Punjab</a></li>
+                    </ul>
+                    <ul class="service_header">
+                        <li class="service_name">Get to know Us</li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Join Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="footer_bottom">
+                <div class="copy_right">
+                    <span>&copy; 2022 MiniStore</span>
+                </div>
+                <div class="tou">
+                    <a href="#">Terms of Use &nbsp; |</a>
+                    <a href="#">Privacy Policy &nbsp; | </a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <div class="page-up">
+        <a href="washingmachines.html"><lord-icon src="https://cdn.lordicon.com/fupxfyca.json" trigger="hover"
+                colors="primary:#ffffff" state="hover-3" style="width:40px;height:40px" id="page_up_button"
+                title="Go back to top"></lord-icon></a>
+    </div> -->
+
+
+
+
+
+    <!--js for toggle menu-->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "300px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+
+    <script>
+        // Select all elements with the "star" class and store them in a NodeList called "stars"
+        const stars = document.querySelectorAll(".cp-rating .star");
+
+        // Loop through the "stars" NodeList
+        stars.forEach(star => {
+            // Add an event listener that runs a function when the "click" event is triggered
+            star.addEventListener("click", () => {
+                // Loop through the stars within the same section
+                const sectionStars = star.parentElement.querySelectorAll(".star");
+                sectionStars.forEach((sectionStar, index) => {
+                    // Add the "active" class to the clicked star and any stars with a lower index
+                    // and remove the "active" class from any stars with a higher index
+                    index <= Array.from(sectionStars).indexOf(star)
+                        ? sectionStar.classList.add("active")
+                        : sectionStar.classList.remove("active");
+                });
+            });
+        });
+    </script>
+
+
+
+    <!-- countdown-timer -->
+    <script>
+        // Function to update countdown timer for a product
+        function updateCountdown(id, endTime) {
+            const countdownElement = document.getElementById(id);
+
+            // Update the countdown every second
+            const intervalId = setInterval(() => {
+                const now = new Date().getTime();
+                const timeRemaining = endTime - now;
+
+                if (timeRemaining <= 0) {
+                    // Deal has ended
+                    countdownElement.textContent = 'Deal has ended';
+                    clearInterval(intervalId);
+                } else {
+                    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                    countdownElement.textContent = `0${hours}:${minutes}:${seconds}`;
+                }
+            }, 1000);
+        }
+
+        // Set the end times for each product (replace with your actual end times)
+        const endTime1 = new Date().getTime() + 2 * 60 * 60 * 1000 + 12 * 60 * 1000 + 22 * 1000;
+        const endTime2 = new Date().getTime() + 3 * 60 * 60 * 1000 + 30 * 60 * 1000 + 45 * 1000;
+        const endTime3 = new Date().getTime() + 1 * 60 * 60 * 1000 + 45 * 60 * 1000 + 15 * 1000;
+        const endTime4 = new Date().getTime() + 4 * 60 * 60 * 1000 + 5 * 60 * 1000 + 10 * 1000;
+
+        // Initialize countdown timers
+        updateCountdown('countdown1', endTime1);
+        updateCountdown('countdown2', endTime2);
+        updateCountdown('countdown3', endTime3);
+        updateCountdown('countdown4', endTime4);
+    </script>
+
+
+    <script>
+        // Get all elements with the "heart" class
+        const heartIcons = document.querySelectorAll(".heart");
+
+        // Add a click event listener to each icon
+        heartIcons.forEach(icon => {
+            icon.addEventListener("click", function () {
+                this.classList.toggle("active");
+                if (this.classList.contains("active")) {
+                    this.setAttribute("name", "heart");
+                } else {
+                    this.setAttribute("name", "heart-outline");
+                }
+            });
+        });
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+
+</html>

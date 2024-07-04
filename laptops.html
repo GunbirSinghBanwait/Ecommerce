@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        MiniStore
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- main css file -->
+    <link rel="stylesheet" href="./CSS/laptops.css">
+    <!-- main js file -->
+    <!-- <script src="JS/script.js"></script> -->
+    <!--Ion-icons js-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- lordicons js -->
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-----------Header------------------>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="170px" height="100px"></a>
+                </div>
+                <!--search bar -->
+                <input id="search_bar" type="text" placeholder="What are you looking for?...">
+                <!--search icon-->
+                <lord-icon src="https://cdn.lordicon.com/xfftupfv.json" trigger="hover" colors="primary:#ffffff"
+                    state="hover" style="width:40px;height:40px" id="search_btn">
+                </lord-icon>
+                <nav>
+                    <ul id="MenuItems">
+                        <!-- Home -->
+                        <li><a href="index.html" data-title="Home"><lord-icon
+                                    src="https://cdn.lordicon.com/osuxyevn.json" trigger="hover"
+                                    colors="primary:#ffffff" state="hover-3" style="width:40px;height:40px"></lord-icon>
+                            </a></li>
+                        <!-- About Us -->
+                        <li><a href="aboutus.html" data-title="About Us"><lord-icon
+                                    src="https://cdn.lordicon.com/amascaoj.json" trigger="hover"
+                                    colors="primary:#ffffff" style="width:40px;height:40px">
+                                </lord-icon>
+                            </a></li>
+                        <!-- Contact Us -->
+                        <li><a href="contactus.html" data-title="Contact Us"><lord-icon
+                                    src="https://cdn.lordicon.com/hpivxauj.json" trigger="hover"
+                                    colors="primary:#ffffff" style="width:40px;height:40px">
+                                </lord-icon>
+                            </a></li>
+                        <!-- Categories -->
+                        <li><a href="index.html#categories" data-title="Categories"><lord-icon
+                                    src="https://cdn.lordicon.com/svbmmyue.json" trigger="hover"
+                                    colors="primary:#ffffff" state="hover" style="width:40px;height:40px">
+                                </lord-icon>
+                            </a></li>
+                        <!-- Sign Up / Log In -->
+                        <li><a href="account.html" data-title="Account"><lord-icon
+                                    src="https://cdn.lordicon.com/bhfjfgqz.json" trigger="hover"
+                                    colors="primary:#ffffff" state="hover" style="width:40px;height:40px">
+                                </lord-icon>
+                            </a></li>
+                    </ul>
+                </nav>
+                <!-- Cart  -->
+                <a href="cart.html"><lord-icon src="https://cdn.lordicon.com/medpcfcy.json" trigger="hover"
+                        colors="primary:#ffffff" state="hover-1" style="width:40px;height:45px">
+                    </lord-icon></a>
+                <!-- Menu-Icon -->
+                <lord-icon src="https://cdn.lordicon.com/jtqpkhoh.json" trigger="hover"
+                    colors="primary:#ffffff,secondary:#08a88a" style="width:40px;height:40px" class="menu-icon"
+                    onclick="menutoggle()">
+                </lord-icon>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------Demo Page---------------->
+
+
+    <div class="main-up">
+        <img src="./images/mix.jpg">
+        <h1>Laptops</h1>
+    </div>
+    <div class="container2">
+        <h1>Top Trending Deals</h1>
+        <div class="grid div-one">
+            <div class="card">
+                <div class="product-img"><img
+                        src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1692595086/Croma%20Assets/Computers%20Peripherals/Laptop/Images/272253_x5kvhg.png?tr=w-1000"
+                        alt="ASUS X1502ZA Intel Core i5 12th Gen (15 inch, 8GB, 512GB, Windows 11, MS Office 2021, Intel Iris Xe Graphics, LED Backlight Display, Quiet Blue, X1502ZA-EJ532WS)"
+                        title="ASUS X1502ZA Intel Core i5 12th Gen (15 inch, 8GB, 512GB, Windows 11, MS Office 2021, Intel Iris Xe Graphics, LED Backlight Display, Quiet Blue, X1502ZA-EJ532WS)">
+                </div>
+                <div class="product-info">
+                    <p class="product-title">ASUS X1502ZA Intel Core i5 12th Gen (15 inch, 8GB, 512GB, Windows 11, MS
+                        Office
+                        2021, Intel Iris Xe Graphics, LED Backlight Display, Quiet Blue, X1502ZA-EJ532WS)</p>
+                    <div class="cp-price">
+                        <span class="new-price">
+                            <span class="amount">₹54,990.00</span>
+                        </span>
+                        <span class="old-price">
+                            <span class="amount">₹70,990.00</span>
+                        </span>
+                    </div>
+                    <div class="cp-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <ion-icon name="heart-outline" class="heart" data-toggle="heart8" title="Save for Later"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product-img"><img
+                        src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1688581834/Croma%20Assets/Computers%20Peripherals/Laptop/Images/272534_0_apeoee.png?tr=w-1000"
+                        alt="HP 15s-fr5009TU Intel Core i3 12th Gen (15.6 inch, 8GB, 512GB, Windows 11, MS Office 2021, Intel UHD, FHD Display, Natural Silver, 7Q6Z9PA#ACJ)"
+                        title="HP 15s-fr5009TU Intel Core i3 12th Gen (15.6 inch, 8GB, 512GB, Windows 11, MS Office 2021, Intel UHD, FHD Display, Natural Silver, 7Q6Z9PA#ACJ)">
+                </div>
+                <div class="product-info">
+                    <p class="product-title">HP 15s-fr5009TU Intel Core i3 12th Gen &nbsp;(15.6 inch, 8GB, 512GB,
+                        Windows 11,
+                        MS
+                        Office 2021, Intel UHD, FHD Display, Natural Silver, 7Q6Z9PA#ACJ)</p>
+                    <div class="cp-price"><span class="new-price"><span class="amount">₹41,490.00 </span></span><span
+                            class="old-price"><span class="amount">₹51,134.00</span></span></div>
+                    <div class="cp-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <ion-icon name="heart-outline" class="heart" data-toggle="heart8" title="Save for Later"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product-img"><img
+                        src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1662553848/Croma%20Assets/Computers%20Peripherals/Laptop/Images/261170_u7tfva.png?tr=w-1000"
+                        alt="acer Aspire 5 A515-57G Intel Core i5 12th Gen (15.6 inch, 16GB, 512GB, Windows 11, MS Office 2021, NVIDIA RTX 2050, FHD IPS Display, Steel Gray, UN.K9TSI.003)"
+                        title="acer Aspire 5 A515-57G Intel Core i5 12th Gen (15.6 inch, 16GB, 512GB, Windows 11, MS Office 2021, NVIDIA RTX 2050, FHD IPS Display, Steel Gray, UN.K9TSI.003)">
+                </div>
+                <div class="product-info">
+                    <p class="product-title">Acer Aspire 5 A515-57G Intel Core i5 12th Gen (15.6 inch, 16GB, 512GB,
+                        Windows 11,
+                        MS Office 2021, NVIDIA RTX 2050, FHD IPS Display, Steel Gray, UN.K9TSI.003)</p>
+                    <div class="cp-price"><span class="new-price"><span class="amount">₹59,990.00 </span></span><span
+                            class="old-price"><span class="amount">₹88,999.00</span></span></div>
+                    <div class="cp-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <ion-icon name="heart-outline" class="heart" data-toggle="heart8" title="Save for Later"></ion-icon>
+                </div>
+            </div>
+            <div class="card" id="apple">
+                <div class="product-img"><img
+                        src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1685966374/Croma%20Assets/Computers%20Peripherals/Laptop/Images/256711_umnwok.png?tr=w-1000"
+                        alt="Apple MacBook Air 2020 (M1, 13.3 Inch, 8GB, 256GB, macOS Big Sur, Space Grey)"
+                        title="Apple MacBook Air 2020 (M1, 13.3 Inch, 8GB, 256GB, macOS Big Sur, Space Grey)"></div>
+                <div class="product-info">
+                    <p class="product-title">Apple MacBook Air 2020 (M1, 13.3 Inch, 8GB, 256GB, macOS Big, Space Grey,
+                        Display: 13.3 inches LED-Backlit
+                        Memory: 8GB DDR4 RAM, 256GB SSD ROM)</p>
+                    <div class="cp-price"><span class="new-price"><span class="amount">₹81,990.00 </span></span><span
+                            class="old-price"><span class="amount">₹99,900.00</span></span></div>
+                    <div class="cp-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <ion-icon name="heart-outline" class="heart" data-toggle="heart8" title="Save for Later"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <h1>Limited Deals</h1>
+        <div class="grid div-two" >
+            <div class="card">
+                <div class="product-img"><img
+                        src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1668663197/Croma%20Assets/Computers%20Peripherals/Laptop/Images/262706_0_wog1el.png?tr=w-1000"
+                        alt="acer Nitro 5 Intel Core i5 12th Gen (15.6 inch, 16GB, 512GB, Windows 11 Home, MS Office, NVIDIA GeForce RTX 3050, FHD IPS Display, Obsidian Black, UN.QFHSI.025)"
+                        title="acer Nitro 5 Intel Core i5 12th Gen (15.6 inch, 16GB, 512GB, Windows 11 Home, MS Office, NVIDIA GeForce RTX 3050, FHD IPS Display, Obsidian Black, UN.QFHSI.025)">
+                </div>
+                <div class="product-info">
+                    <p class="product-title">Acer Nitro 5 Intel Core i5 12th Gen (15.6 inch, 16GB, 512GB, Windows 11
+                        Home, MS
+                        Office, NVIDIA GeForce RTX 3050, FHD IPS Display, Obsidian Black, UN.QFHSI.025)</p>
+                    <div class="cp-price">
+                        <span class="new-price">
+                            <span class="amount">₹69,999.00</span>
+                        </span>
+                        <span class="old-price">
+                            <span class="amount">₹152,999.00</span>
+                        </span>
+                    </div>
+                    <div class="cp-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <ion-icon name="heart-outline" class="heart" data-toggle="heart8" title="Save for Later"></ion-icon>
+                    <p>Deal ends in: <span id="countdown1">02:12:22</span></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product-img"><img
+                        src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1663347404/Croma%20Assets/Computers%20Peripherals/Laptop/Images/252184_0_sz4zqo.png?tr=w-1000"
+                        alt="DELL Inspiron 15 5520 Intel Core i5 12th Gen (15.6 inch, 16GB, 512GB, Windows 11, MS Office 2021, NVIDIA GeForce RTX 3050 Graphics, FHD LED-Backlit Display, Dark Shadow Grey, D560822WIN9B)"
+                        title="DELL Inspiron 15 5520 Intel Core i5 12th Gen (15.6 inch, 16GB, 512GB, Windows 11, MS Office 2021, NVIDIA GeForce RTX 3050 Graphics, FHD LED-Backlit Display, Dark Shadow Grey, D560822WIN9B)">
+                </div>
+                <div class="product-info">
+                    <p class="product-title">DELL Inspiron 15 5520 Intel Core i5 12th Gen (15.6 inch, 16GB, 512GB,
+                        Windows 11,
+                        NVIDIA GeForce RTX 3050 Graphics, FHD LED-Backlit Display, Dark Shadow Grey)</p>
+                    <div class="cp-price"><span class="new-price"><span class="amount">₹71,490.00 </span></span><span
+                            class="old-price"><span class="amount">₹96,299.00</span></span></div>
+                    <div class="cp-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <ion-icon name="heart-outline" class="heart" data-toggle="heart8" title="Save for Later"></ion-icon>
+                    <p>Deal ends in: <span id="countdown2">03:30:45</span></p>
+
+                </div>
+            </div>
+            <div class="card">
+                <div class="product-img"><img
+                        src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1688577335/Croma%20Assets/Computers%20Peripherals/Laptop/Images/272249_0_nchowk.png?tr=w-1000"
+                        alt="HP Victus Fa0998TX Intel Core i5 12th Gen (15 inch, 16GB, 512GB, Windows 11, MS Office 2021, NVIDIA GeForce RTX 3050 Graphics, Full HD IPS Display, Performance Blue, 805X4PA)"
+                        title="HP Victus Fa0998TX Intel Core i5 12th Gen (15 inch, 16GB, 512GB, Windows 11, MS Office 2021, NVIDIA GeForce RTX 3050 Graphics, Full HD IPS Display, Performance Blue, 805X4PA)">
+                </div>
+                <div class="product-info">
+                    <p class="product-title">HP Victus Fa0998TX Intel Core i5 12th Gen (15 inch, 16GB, 512GB, Windows
+                        11, NVIDIA GeForce RTX 3050 Graphics, Full HD IPS Display, Performance Blue, 805X4PA)</p>
+                    <div class="cp-price"><span class="new-price"><span class="amount">₹69,990.00 </span></span><span
+                            class="old-price"><span class="amount">₹88,214.00</span></span></div>
+                    <div class="cp-rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                    </div>
+                    <ion-icon name="heart-outline" class="heart" data-toggle="heart8" title="Save for Later"></ion-icon>
+                    <p>Deal ends in: <span id="countdown3">01:45:15</span></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product-img"><img
+                        src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1683030967/Croma%20Assets/Computers%20Peripherals/Laptop/Images/272575_gjd3ii.png?tr=w-1000"
+                        alt="ASUS TUF Gaming F15 FX506HF-HN024WS Intel Core i5 11th Gen (15.6 inch, 8GB, 512GB, Windows 11, MS Office 2021, NVIDIA GeForce RTX 2050, FHD IPS Display, Graphite Black, 90NR0HB4-M003C0)"
+                        title="ASUS TUF Gaming F15 FX506HF-HN024WS Intel Core i5 11th Gen (15.6 inch, 8GB, 512GB, Windows 11, MS Office 2021, NVIDIA GeForce RTX 2050, FHD IPS Display, Graphite Black, 90NR0HB4-M003C0)">
+                    <div class="product-info">
+                        <p class="product-title">ASUS TUF Gaming F15 FX506HF-HN024WS Intel Core i5 11th Gen (15.6 inch,
+                            8GB, 512GB,
+                            Windows 11, NVIDIA GeForce RTX 2050, FHD IPS Display, Graphite Black)</p>
+                        <div class="cp-price"><span class="new-price"><span class="amount">₹55,990.00
+                                </span></span><span class="old-price"><span class="amount">₹77,990.00</span></span>
+                        </div>
+                        <div class="cp-rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </div>
+                        <ion-icon name="heart-outline" class="heart" data-toggle="heart8" title="Save for Later"></ion-icon>
+                        <p>Deal ends in: <span id="countdown4">04:05:10</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <br>
+        <br>
+
+
+
+        <h1>Pick Your Laptop Brand</h1>
+        <div class="scroll-container">
+            <a href="samsung.html"><img src="./images/samsung.jpg" alt="Samsung" title="Samsung"></a>
+            <img src="./images/acer.jpg" alt="Acer" title="Acer">
+            <img src="./images/asus.jpg" alt="Asus" title="Asus">
+            <img src="./images/dell.jpg" alt="Dell" title="Dell">
+            <img src="./images/hp.jpg" alt="HP" title="HP">
+            <img src="./images/apple.jpg" alt="Mac" title="Mac">
+            <img src="./images/lenovo.jpg" alt="Lenovo" title="Lenovo">
+        </div>
+
+
+    </div>
+
+    <a href="demopage.html"><img src="./images/guide.jpg" alt="" class="img"></a>
+
+    </div>
+
+
+
+    <!----------Footer-------------------->
+    <footer>
+        <div class="container1">
+            <div class="content_footer">
+                <div class="profile">
+                    <div class="logo_area">
+                        <img src="images/logo.png">
+                        <!-- <span class="logo_name">MiniStore</span> -->
+                    </div>
+                    <div class="desc_area">
+                        <p style="color: #fff;">
+                            <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vitae cum autem, dolores
+                            harum non, beatae
+                            optio repudiandae nobis dolor incidunt numquam. -->
+                            Ministore, with its user-friendly interface and a wide range of cutting-edge tech gadgets,
+                            home appliances, provides customers
+                            with a smooth shopping experience, making it a go-to destination for tech enthusiasts and
+                            consumers alike.
+                        </p>
+                    </div>
+                    <div class="social_media">
+                        <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                        <a href="#"><i class='bx bxl-facebook-square'></i></a>
+                        <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                        <a href="#"><i class='bx bxl-github'></i></a>
+                    </div>
+                </div>
+                <div class="service_area">
+                    <ul class="service_header">
+                        <li class="service_name">Services</li>
+                        <li><a href="#">Buying Guide</a></li>
+                        <li><a href="#">Payment Policy</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                    <ul class="service_header">
+                        <li class="service_name">Locations</li>
+                        <li><a href="#">Delhi</a></li>
+                        <li><a href="#">Mumbai</a></li>
+                        <li><a href="#">Dehradun</a></li>
+                        <li><a href="#">Punjab</a></li>
+                    </ul>
+                    <ul class="service_header">
+                        <li class="service_name">Get to know Us</li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Join Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="footer_bottom">
+                <div class="copy_right">
+                    <span>&copy; 2022 MiniStore</span>
+                </div>
+                <div class="tou">
+                    <a href="#">Terms of Use &nbsp; |</a>
+                    <a href="#">Privacy Policy &nbsp; | </a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <!--js for toggle menu-->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "300px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+
+
+
+    <script>
+        // Select all elements with the "ion-icon" tag and store them in a NodeList called "stars"
+        const stars = document.querySelectorAll(".card .cp-rating ion-icon");
+
+        // Loop through the "stars" NodeList
+        stars.forEach((star, index1) => {
+            // Add an event listener that runs a function when the "click" event is triggered
+            star.addEventListener("click", () => {
+                // Loop through the "stars" NodeList Again
+                stars.forEach((star, index2) => {
+                    // Add the "active" class to the clicked star and any stars with a lower index
+                    // and remove the "active" class from any stars with a higher index
+                    index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
+                });
+            });
+        });
+    </script>
+
+
+    <!-- countdown-timer -->
+    <script>
+        // Function to update countdown timer for a product
+        function updateCountdown(id, endTime) {
+            const countdownElement = document.getElementById(id);
+
+            // Update the countdown every second
+            const intervalId = setInterval(() => {
+                const now = new Date().getTime();
+                const timeRemaining = endTime - now;
+
+                if (timeRemaining <= 0) {
+                    // Deal has ended
+                    countdownElement.textContent = 'Deal has ended';
+                    clearInterval(intervalId);
+                } else {
+                    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                    countdownElement.textContent = `0${hours}:${minutes}:${seconds}`;
+                }
+            }, 1000);
+        }
+
+        // Set the end times for each product (replace with your actual end times)
+        const endTime1 = new Date().getTime() + 2 * 60 * 60 * 1000 + 12 * 60 * 1000 + 22 * 1000;
+        const endTime2 = new Date().getTime() + 3 * 60 * 60 * 1000 + 30 * 60 * 1000 + 45 * 1000;
+        const endTime3 = new Date().getTime() + 1 * 60 * 60 * 1000 + 45 * 60 * 1000 + 15 * 1000;
+        const endTime4 = new Date().getTime() + 4 * 60 * 60 * 1000 + 5 * 60 * 1000 + 10 * 1000;
+
+        // Initialize countdown timers
+        updateCountdown('countdown1', endTime1);
+        updateCountdown('countdown2', endTime2);
+        updateCountdown('countdown3', endTime3);
+        updateCountdown('countdown4', endTime4);
+    </script>
+
+
+<script>
+    // Get all elements with the "heart" class
+    const heartIcons = document.querySelectorAll(".heart");
+
+    // Add a click event listener to each icon
+    heartIcons.forEach(icon => {
+        icon.addEventListener("click", function () {
+            this.classList.toggle("active");
+            if (this.classList.contains("active")) {
+                this.setAttribute("name", "heart");
+            } else {
+                this.setAttribute("name", "heart-outline");
+            }
+        });
+    });
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+
+</html>

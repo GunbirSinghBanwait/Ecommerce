@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        MiniStore
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- main css file -->
+    <link rel="stylesheet" href="./CSS/samsung.css">
+    <!-- main js file -->
+    <!-- <script src="JS/script.js"></script> -->
+    <!--Ion-icons js-->
+    <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <!-- lordicons js -->
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-----------Header------------------>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="170px" height="100px"></a>
+                </div>
+                <!--search bar -->
+                <input id="search_bar" type="text" placeholder="What are you looking for?...">
+                <!--search icon-->
+                <lord-icon src="https://cdn.lordicon.com/xfftupfv.json" trigger="hover" colors="primary:#ffffff"
+                    state="hover" style="width:40px;height:40px" id="search_btn">
+                </lord-icon>
+                <nav>
+                    <ul id="MenuItems">
+                        <!-- Home -->
+                        <li><a href="index.html" data-title="Home"><lord-icon
+                                    src="https://cdn.lordicon.com/osuxyevn.json" trigger="hover"
+                                    colors="primary:#ffffff" state="hover-3" style="width:40px;height:40px"></lord-icon>
+                            </a></li>
+                        <!-- About Us -->
+                        <li><a href="aboutus.html" data-title="About Us"><lord-icon
+                                    src="https://cdn.lordicon.com/amascaoj.json" trigger="hover"
+                                    colors="primary:#ffffff" style="width:40px;height:40px">
+                                </lord-icon>
+                            </a></li>
+                        <!-- Contact Us -->
+                        <li><a href="contactus.html" data-title="Contact Us"><lord-icon
+                                    src="https://cdn.lordicon.com/hpivxauj.json" trigger="hover"
+                                    colors="primary:#ffffff" style="width:40px;height:40px">
+                                </lord-icon>
+                            </a></li>
+                        <!-- Categories -->
+                        <li><a href="index.html#categories" data-title="Categories"><lord-icon
+                                    src="https://cdn.lordicon.com/svbmmyue.json" trigger="hover"
+                                    colors="primary:#ffffff" state="hover" style="width:40px;height:40px">
+                                </lord-icon>
+                            </a></li>
+                        <!-- Sign Up / Log In -->
+                        <li><a href="account.html" data-title="Account"><lord-icon
+                                    src="https://cdn.lordicon.com/bhfjfgqz.json" trigger="hover"
+                                    colors="primary:#ffffff" state="hover" style="width:40px;height:40px">
+                                </lord-icon>
+                            </a></li>
+                    </ul>
+                </nav>
+                <!-- Cart  -->
+                <a href="cart.html"><lord-icon src="https://cdn.lordicon.com/medpcfcy.json" trigger="hover"
+                        colors="primary:#ffffff" state="hover-1" style="width:40px;height:45px">
+                    </lord-icon></a>
+                <!-- Menu-Icon -->
+                <lord-icon src="https://cdn.lordicon.com/jtqpkhoh.json" trigger="hover"
+                    colors="primary:#ffffff,secondary:#08a88a" style="width:40px;height:40px" class="menu-icon"
+                    onclick="menutoggle()">
+                </lord-icon>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------Samsung Laptops--------------->
+    <div class="container2">
+        <h2>Sony Televisions</h2>
+        <div class="side-bar">
+            <h4>SORT BY</h4>
+            <select name="sort" id="sort" title="sort by">
+                <a href="">
+                    <option value="Featured">Featured</option>
+                </a>
+                <a>
+                    <option value="Latest Arrivals">Latest Arrivals</option>
+                </a>
+                <a>
+                    <option value="Price(Lowest First)">Price(Lowest First)</option>
+                </a>
+                <a>
+                    <option value="Price(Highest First)">Price(Highest First)</option>
+                </a>
+                <a>
+                    <option value="Top Rated">Top Rated</option>
+                </a>
+            </select>
+            <h4>FILTER BY</h4>
+            <hr>
+            <h4>CATEGORIES</h4>
+            <input type="checkbox" id="category-4kUltraHDTVs" name="category" value="4K Ultra HD TVs" checked>
+            <label for="category-4kUltraHDTVs">4K Ultra HD TVs</label><br>
+            <input type="checkbox" id="category-largeScreenTVs" name="category" value="Large Screen TVs" checked>
+            <label for="category-largeScreenTVs">Large Screen TVs</label><br>
+            <input type="checkbox" id="category-smartTVs" name="category" value="Smart TVs" checked>
+            <label for="category-smartTVs">Smart TVs</label><br>
+            <br>
+            <h4>PRICES</h4>
+            <input type="checkbox" id="price60to70k" name="priceRange" value="60-70k">
+            <label for="price60to70k">20,000 - 30,000</label><br>
+
+            <input type="checkbox" id="price70to80k" name="priceRange" value="70-80k">
+            <label for="price70to80k">40,000 - 50,000</label><br>
+
+            <input type="checkbox" id="price80to90k" name="priceRange" value="80-90k">
+            <label for="price80to90k">50,000 - 70,000</label><br>
+
+            <input type="checkbox" id="price90to100k" name="priceRange" value="90-100k">
+            <label for="price90to100k">90,000 - 1,00,000</label><br>
+
+            <input type="checkbox" id="price100to200k" name="priceRange" value="100-200k">
+            <label for="price100to200k">1,00,000 - 2,00,000</label><br>
+
+
+            <br><br>
+            <h4>BRAND</h4>
+            <input type="checkbox" id="checkbox1" name="checkbox1" checked>
+            <label for="checkbox1">Sony</label><br>
+
+            <br><br>
+            <h4>SCREEN SIZE </h4>
+            <input type="checkbox" id="checkbox1" name="checkbox1">
+            <label for="checkbox1">25-32</label><br>
+            <input type="checkbox" id="checkbox2" name="checkbox1">
+            <label for="checkbox1">33-43</label><br>
+            <input type="checkbox" id="checkbox3" name="checkbox1">
+            <label for="checkbox1">44-54</label>
+
+
+        </div>
+        <div class="main-section">
+            <div class="product" data-category="4K Ultra HD TVs" data-price="40990">
+                <div class="image">
+                    <img src="./images/Televisions/SonyTV1.png" alt="">
+                </div>
+                <div class="description">
+                    <p class="heading">SONY X64L 108 cm (43 inch) 4K Ultra HD LED Google TV with 4K Processor X1 (2023
+                        Model) Sound: 20W Speaker, Dolby Audio
+                        USP: 4K X Reality Pro | Motion Flow XR100 | Live Colour Connectivity: 3 HDMI | 1 USB | Wi-Fi</p>
+                    <span class="new-price"> ₹40,990</span><br>
+                    <span class="mrp">M.R.P : </span>
+                    <span class="old-price"> ₹59,900</span>
+                    <span class="discount"> -32%</span><br>
+                    <a href=""><button type="button">Add to Cart</button></a>
+                    <a href=""><button type="button" class="product-button" data-product="product1">Buy Now</button></a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="product" data-category="Large Screen TVs" data-price="63200">
+                <div class="image">
+                    <img src="./images/Televisions/SonyTV2.png" alt="">
+                </div>
+                <div class="description">
+                    <p class="heading">SONY X75L 139 cm (55 inch) 4K Ultra HD LED Android TV with Dynamic Contrast
+                        Enhancer (2023 model) Connectivity: 3 HDMI | 2 USB | WiFi
+                        Sound: 20 W Speaker, Dolby Audio USP: 4K X-Reality PRO | Motionflow XR 200</p>
+                    <span class="new-price"> ₹63,200</span><br>
+                    <span class="mrp">M.R.P : </span>
+                    <span class="old-price"> ₹99,900</span>
+                    <span class="discount"> -37%</span><br>
+                    <a href=""><button type="button">Add to Cart</button></a>
+                    <a href=""><button type="button" class="product-button" data-product="product2">Buy Now</button></a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="product" data-category="4K Ultra HD TVs" data-price="81990">
+                <div class="image">
+                    <img src="./images/Televisions/SonyTV3.png" alt="">
+                </div>
+                <div class="description">
+                    <p class="heading">SONY X82L 138.8 cm (55 inch) 4K Ultra HD LED Google TV with Live Colour
+                        Technology (2023 model) Connectivity: 4 HDMI | 2 USB | WiFi Sound: 20 Watts Speaker, Dolby Audio
+                        Atoms
+                        Chromecast built-in | Motion Flow XR200</p>
+                    <span class="new-price"> ₹81,990</span><br>
+                    <span class="mrp">M.R.P : </span>
+                    <span class="old-price"> ₹1,29,900</span>
+                    <span class="discount"> -37%</span><br>
+                    <a href=""><button type="button">Add to Cart</button></a>
+                    <a href=""><button type="button" class="product-button" data-product="product3">Buy Now</button></a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="product" data-category="Large Screen TVs" data-price="87390">
+                <div class="image">
+                    <img src="./images/Televisions/SonyTV4.png" alt="">
+                </div>
+                <div class="description">
+                    <p class="heading">SONY X75L 164 cm (65 inch) 4K Ultra HD LED Android TV with X-Reality PRO (2023
+                        model) Connectivity: 3 HDMI | 2 USB | WiFi
+                        Sound: 20 W Speaker, Dolby Audio
+                        USP: Built-in Chromecast |Auto HDR Tone Mapping</p>
+                    <span class="new-price"> ₹87,390</span><br>
+                    <span class="mrp">M.R.P : </span>
+                    <span class="old-price"> ₹1,39,900</span>
+                    <span class="discount"> -38%</span><br>
+                    <a href=""><button type="button">Add to Cart</button></a>
+                    <a href=""><button type="button" class="product-button" data-product="product4">Buy Now</button></a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="product" data-category="Smart TVs" data-price="185240">
+                <div class="image last">
+                    <img src="./images/Televisions/SonyTV5.png" alt="" width="400px" height="200px">
+                </div>
+                <div class="description">
+                    <p class="heading">SONY Bravia 139.7 cm (55 inch) OLED 4K Ultra HD Google TV with Cognitive
+                        Processor XR (2023 model) Connectivity: 4 HDMI | 2 USB | Wi-Fi
+                        Sound: 60W Speaker, Dolby Atoms
+                        USP: XR Triluminos pro | Motionflow XR</p>
+                    <span class="new-price"> ₹1,85,240</span><br>
+                    <span class="mrp">M.R.P : </span>
+                    <span class="old-price"> ₹2,49,900</span>
+                    <span class="discount"> -26%</span><br>
+                    <a href=""><button type="button">Add to Cart</button></a>
+                    <a href=""><button type="button" class="product-button" data-product="product5">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <p class="page-p">Visit other pages:</p>
+        <div class="page-btn">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#8594;</span>
+        </div>
+
+    </div>
+
+
+    <!----------Footer-------------------->
+    <footer>
+        <div class="container1">
+            <div class="content_footer">
+                <div class="profile">
+                    <div class="logo_area">
+                        <img src="images/logo.png">
+                        <!-- <span class="logo_name">MiniStore</span> -->
+                    </div>
+                    <div class="desc_area">
+                        <p style="color: #fff;">
+                            Ministore, with its user-friendly interface and a wide range of cutting-edge tech gadgets,
+                            home appliances, provides customers
+                            with a smooth shopping experience, making it a go-to destination for tech enthusiasts and
+                            consumers alike.
+                        </p>
+                    </div>
+                    <div class="social_media">
+                        <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                        <a href="#"><i class='bx bxl-facebook-square'></i></a>
+                        <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                        <a href="#"><i class='bx bxl-github'></i></a>
+                    </div>
+                </div>
+                <div class="service_area">
+                    <ul class="service_header">
+                        <li class="service_name">Services</li>
+                        <li><a href="#">Buying Guide</a></li>
+                        <li><a href="#">Payment Policy</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                    <ul class="service_header">
+                        <li class="service_name">Locations</li>
+                        <li><a href="#">Delhi</a></li>
+                        <li><a href="#">Mumbai</a></li>
+                        <li><a href="#">Dehradun</a></li>
+                        <li><a href="#">Punjab</a></li>
+                    </ul>
+                    <ul class="service_header">
+                        <li class="service_name">Get to know Us</li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Join Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="footer_bottom">
+                <div class="copy_right">
+                    <span>&copy; 2022 MiniStore</span>
+                </div>
+                <div class="tou">
+                    <a href="#">Terms of Use &nbsp; |</a>
+                    <a href="#">Privacy Policy &nbsp; | </a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <!--js for toggle menu-->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "300px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+
+
+
+
+    <!-- side bar k liye -->
+    <script>
+        const categoryCheckboxes = document.querySelectorAll('input[name="category"]');
+        const priceCheckboxes = document.querySelectorAll('input[name="priceRange"]');
+        const products = document.querySelectorAll('.product');
+
+        // Function to update product visibility
+        function updateProductVisibility() {
+            const selectedCategories = Array.from(categoryCheckboxes)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.value);
+
+            products.forEach(product => {
+                const category = product.getAttribute('data-category');
+
+                const categoryVisible = selectedCategories.includes(category);
+                product.style.display = categoryVisible ? 'block' : 'none';
+            });
+        }
+
+        // Add event listeners to checkboxes
+        categoryCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateProductVisibility);
+        });
+
+        // Initial update
+        updateProductVisibility();
+
+    </script>
+
+
+
+
+    <!-- popup -->
+
+
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" id="close-popup">&times;</span>
+            <h2 style="text-align: center;">Checkout Infromation</h2>
+            <form id="checkout-form">
+            <div class="sections">
+                <a href="#" id="personal-info-link">Personal Information</a>
+                <a href="#" id="billing-address-link">Billing Address</a>
+                <a href="#" id="payment-options-link">Payment Options</a>
+                <div class="section active" id="personal-info">
+                    <h3>Personal Information</h3>
+                    <!-- Full Name -->
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Your Full Name" required>
+
+                    <!-- Email Address -->
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+
+                    <!-- Phone Number -->
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                </div>
+
+                <div class="section active" id="billing-address">
+                    <h3>Billing Address</h3>
+                    <!-- Street Address -->
+                    <label for="street-address">Street Address:</label>
+                    <input type="text" id="street-address" name="street-address" placeholder="Your Street Address"
+                        required>
+
+                    <!-- City -->
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" placeholder="Your City" required>
+
+                    <!-- State -->
+                    <label for="state">State:</label>
+                    <input type="text" id="state" name="state" placeholder="Your State" required>
+
+                    <!-- ZIP Code -->
+                    <label for="zip-code">ZIP Code:</label>
+                    <input type="text" id="zip-code" name="zip-code" placeholder="Your ZIP Code" required>
+
+                    <!-- Country -->
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="usa">India</option>
+
+                        <!-- Add more countries as needed -->
+                    </select>
+                </div>
+
+                <div class="section active" id="payment-options">
+                    <h3>Payment Options</h3>
+                    <!-- Payment Method -->
+                    <label for="payment-method">Payment Method:</label>
+                    <select id="payment-method" name="payment-method" required>
+                        <option value="credit-card">Credit Card</option>
+                        <option value="cod">Cash on Delivery</option>
+                        <!-- Add more payment methods as needed -->
+                    </select>
+
+                    <!-- Credit Card Number -->
+                    <label for="card-number">Credit Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="Your Card Number">
+
+                    <!-- Expiry Date -->
+                    <label for="expiry-date">Expiry Date:</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY">
+
+                    <!-- CVV -->
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="CVV">
+
+                </div>
+            </div>
+
+            <!-- order summary -->
+            <form id="checkout-form">
+            <h3>Order Summary</h3>
+            <div class="order-summary">
+                <div class="summary-item">
+                    <p style="display: inline-block; margin-right: 18px;">Subtotal:</p>
+                    <span id="subtotal" style="display: inline-block;">0</span>
+                </div>
+                <div class="summary-item">
+                    <p style="display: inline-block; margin-right: 40px;">Shipping:</p>
+                    <span id="shipping" style="display: inline-block;">+0</span>
+                </div>
+                <div class="summary-item">
+                    <p style="display: inline-block; margin-right: 53px;">Tax:</p>
+                    <span id="tax" style="display: inline-block;">+0</span>
+                </div>
+                <div class="summary-item">
+                    <p style="display: inline-block; margin-right: 24px;">Total:</p>
+                    <span id="total" style="display: inline-block;">0</span>
+                </div>
+            </div>
+            <a href="SonyTV.html"><button type="submit" id="submit-button"
+                    onclick="window.alert('Purchase Successful')">Submit</button></a>
+        </form>
+        </div>
+    </div>
+
+    <script>// Get references to the form and submit button
+        const checkoutForm = document.getElementById("checkout-form");
+        const submitButton = document.getElementById("submit-button");
+        
+        // Add a submit event listener to the form
+        checkoutForm.addEventListener("submit", function (event) {
+            // Check the validity of the form
+            if (!checkoutForm.checkValidity()) {
+                // Prevent form submission if the form is not valid
+                event.preventDefault();
+                alert("Please fill in all required fields.");
+            }
+        });
+        
+        // You can also listen to changes in form fields to dynamically update the form validity
+        checkoutForm.addEventListener("change", function () {
+            if (checkoutForm.checkValidity()) {
+                submitButton.removeAttribute("disabled");
+            } else {
+                submitButton.setAttribute("disabled", "disabled");
+            }
+        });
+        </script>
+
+    <script>
+        // document.addEventListener("DOMContentLoaded", function () {
+
+        // Function to update the order summary based on product details
+        function updateOrderSummary(productDetails) {
+            // Calculate subtotal, shipping, tax, and total based on product details
+            const subtotal = productDetails.price * productDetails.quantity;
+            const shipping = 50; // You can calculate shipping here if needed
+            const tax = subtotal * 0.01; // 10% tax as an example
+            const total = subtotal + shipping + tax;
+
+
+            // Update the order summary elements with calculated values
+            document.getElementById("subtotal").textContent = subtotal;
+            document.getElementById("shipping").textContent = shipping;
+            document.getElementById("tax").textContent = tax.toFixed(2);
+            document.getElementById("total").textContent = total.toFixed(2);
+        }
+
+        // Event listeners for Buy Now buttons
+        const buyNowButtons = document.querySelectorAll(".description .product-button");
+        buyNowButtons.forEach(button => {
+            button.addEventListener("click", (event) => {
+
+                // Prevent the default form submission behavior
+                event.preventDefault();
+
+                // Get the product identifier from the data-product attribute
+                const productIdentifier = button.getAttribute("data-product");
+
+                // Fetch the product details and price based on the productIdentifier
+                const productDetails = getProductDetails(productIdentifier);
+
+                // Open the popup and show the "Personal Information" section by default
+                openPopup();
+                // showSection("personal-info");
+
+                // Update the order summary with the fetched product details
+                updateOrderSummary(productDetails);
+            });
+        });
+
+        // Function to fetch product details (replace this with your actual implementation)
+        function getProductDetails(productIdentifier) {
+            console.log("getProductDetails called with identifier:", productIdentifier);
+
+
+
+            // Simulated product details; replace this with your data retrieval logic
+            if (productIdentifier === "product1") {
+                return {
+                    name: "SONY X64L 108 cm (43 inch) 4K Ultra HD LED Google TV with 4K Processor X1 (2023 Model)",
+                    price: 40990,
+                    quantity: 1, // You can set the quantity based on user input if needed
+                    // Add other product details as needed
+                };
+            } else if (productIdentifier === "product2") {
+                return {
+                    name: "SONY X75L 139 cm (55 inch) 4K Ultra HD LED Android TV with Dynamic Contrast Enhancer (2023 model)",
+                    price: 63200,
+                    quantity: 1,
+                    // Add other product details as needed
+                };
+            } else if (productIdentifier === "product3") {
+                return {
+                    name: "SONY X82L 138.8 cm (55 inch) 4K Ultra HD LED Google TV with Live Colour Technology (2023 model)",
+                    price: 81990,
+                    quantity: 1,
+                    // Add other product details as needed
+                };
+            } else if (productIdentifier === "product4") {
+                return {
+                    name: "SONY X75L 164 cm (65 inch) 4K Ultra HD LED Android TV with X-Reality PRO (2023 model)",
+                    price: 87390,
+                    quantity: 1,
+                    // Add other product details as needed
+                };
+            } else if (productIdentifier === "product5") {
+                return {
+                    name: "SONY Bravia 139.7 cm (55 inch) OLED 4K Ultra HD Google TV with Cognitive Processor XR (2023 model)",
+                    price: 185240,
+                    quantity: 1,
+                    // Add other product details as needed
+                };
+            }
+
+            // Check if the productIdentifier exists in the productDetails object
+            if (productDetails[productIdentifier]) {
+                return productDetails[productIdentifier];
+            } else {
+                // Handle the case where the productIdentifier is not found
+                console.log("Product not found.");
+                return null;
+            }
+        }
+
+
+        // Function to open the popup
+        function openPopup() {
+            // document.getElementById("popup").style.display = "block";
+            document.getElementById("popup").style.display = "block";
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+        // Event listener for the close button
+        const closePopupButton = document.getElementById("close-popup");
+        closePopupButton.addEventListener("click", () => {
+            closePopup();
+        });
+        // Get references to the section links
+        const personalInfoLink = document.getElementById("personal-info-link");
+        const billingAddressLink = document.getElementById("billing-address-link");
+        const paymentOptionsLink = document.getElementById("payment-options-link");
+
+        // Get references to the sections
+        const personalInfoSection = document.getElementById("personal-info");
+        const billingAddressSection = document.getElementById("billing-address");
+        const paymentOptionsSection = document.getElementById("payment-options");
+
+        // Function to show a section and hide others
+        function showSection(sectionToShow) {
+            // Hide all sections
+            personalInfoSection.style.display = "none";
+            billingAddressSection.style.display = "none";
+            paymentOptionsSection.style.display = "none";
+
+            // Show the selected section
+            if (sectionToShow === "personal-info") {
+                personalInfoSection.style.display = "block";
+            } else if (sectionToShow === "billing-address") {
+                billingAddressSection.style.display = "block";
+            } else if (sectionToShow === "payment-options") {
+                paymentOptionsSection.style.display = "block";
+            }
+        }
+
+        // Add click event listeners to the links
+        personalInfoLink.addEventListener("click", () => {
+            showSection("personal-info");
+        });
+
+        billingAddressLink.addEventListener("click", () => {
+            showSection("billing-address");
+        });
+
+        paymentOptionsLink.addEventListener("click", () => {
+            showSection("payment-options");
+        });
+
+        // Initially, show the "Personal Information" section by default
+        showSection("personal-info");
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

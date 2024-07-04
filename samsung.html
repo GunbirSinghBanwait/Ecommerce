@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        MiniStore
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- main css file -->
+    <link rel="stylesheet" href="./CSS/samsung.css">
+    <!-- main js file -->
+    <!-- <script src="JS/script.js"></script> -->
+    <!--Ion-icons js-->
+    <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <!-- lordicons js -->
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-----------Header------------------>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="170px" height="100px"></a>
+                </div>
+                <!--search bar -->
+                <input id="search_bar" type="text" placeholder="What are you looking for?...">
+                <!--search icon-->
+                <lord-icon src="https://cdn.lordicon.com/xfftupfv.json" trigger="hover" colors="primary:#ffffff"
+                    state="hover" style="width:40px;height:40px" id="search_btn">
+                </lord-icon>
+                <nav>
+                    <ul id="MenuItems">
+                        <!-- Home -->
+                        <li><a href="index.html" data-title="Home"><lord-icon
+                                    src="https://cdn.lordicon.com/osuxyevn.json" trigger="hover"
+                                    colors="primary:#ffffff" state="hover-3" style="width:40px;height:40px"></lord-icon>
+                            </a></li>
+                        <!-- About Us -->
+                        <li><a href="aboutus.html" data-title="About Us"><lord-icon
+                                    src="https://cdn.lordicon.com/amascaoj.json" trigger="hover"
+                                    colors="primary:#ffffff" style="width:40px;height:40px">
+                                </lord-icon>
+                            </a></li>
+                        <!-- Contact Us -->
+                        <li><a href="contactus.html" data-title="Contact Us"><lord-icon
+                                    src="https://cdn.lordicon.com/hpivxauj.json" trigger="hover"
+                                    colors="primary:#ffffff" style="width:40px;height:40px">
+                                </lord-icon>
+                            </a></li>
+                        <!-- Categories -->
+                        <li><a href="index.html#categories" data-title="Categories"><lord-icon
+                                    src="https://cdn.lordicon.com/svbmmyue.json" trigger="hover"
+                                    colors="primary:#ffffff" state="hover" style="width:40px;height:40px">
+                                </lord-icon>
+                            </a></li>
+                        <!-- Sign Up / Log In -->
+                        <li><a href="account.html" data-title="Account"><lord-icon
+                                    src="https://cdn.lordicon.com/bhfjfgqz.json" trigger="hover"
+                                    colors="primary:#ffffff" state="hover" style="width:40px;height:40px">
+                                </lord-icon>
+                            </a></li>
+                    </ul>
+                </nav>
+                <!-- Cart  -->
+                <a href="cart.html"><lord-icon src="https://cdn.lordicon.com/medpcfcy.json" trigger="hover"
+                        colors="primary:#ffffff" state="hover-1" style="width:40px;height:45px">
+                    </lord-icon></a>
+                <!-- Menu-Icon -->
+                <lord-icon src="https://cdn.lordicon.com/jtqpkhoh.json" trigger="hover"
+                    colors="primary:#ffffff,secondary:#08a88a" style="width:40px;height:40px" class="menu-icon"
+                    onclick="menutoggle()">
+                </lord-icon>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------Samsung Laptops--------------->
+    <div class="container2">
+        <h2>Samsung Laptops</h2>
+        <div class="side-bar">
+            <h4>SORT BY</h4>
+            <select name="sort" id="sort" title="sort by">
+                <a href="">
+                    <option value="Featured">Featured</option>
+                </a>
+                <a>
+                    <option value="Latest Arrivals">Latest Arrivals</option>
+                </a>
+                <a>
+                    <option value="Price(Lowest First)">Price(Lowest First)</option>
+                </a>
+                <a>
+                    <option value="Price(Highest First)">Price(Highest First)</option>
+                </a>
+                <a>
+                    <option value="Top Rated">Top Rated</option>
+                </a>
+            </select>
+            <h4>FILTER BY</h4>
+            <hr>
+            <h4>CATEGORIES</h4>
+            <input type="checkbox" id="category-windowsLaptops" name="category" value="Windows Laptops" checked>
+            <label for="category-windowsLaptops">Windows Laptops</label><br>
+            <input type="checkbox" id="category-ultraThinLaptops" name="category" value="Ultra Thin Laptops" checked>
+            <label for="category-ultraThinLaptops">Ultra Thin Laptops</label><br>
+            <br><br>
+            <h4>PRICES</h4>
+            <input type="checkbox" id="price60to70k" name="priceRange" value="60-70k">
+            <label for="price60to70k">60,000 - 70,000</label><br>
+
+            <input type="checkbox" id="price70to80k" name="priceRange" value="70-80k">
+            <label for="price70to80k">70,000 - 80,000</label><br>
+
+            <input type="checkbox" id="price80to90k" name="priceRange" value="80-90k">
+            <label for="price80to90k">80,000 - 90,000</label><br>
+
+            <input type="checkbox" id="price90to100k" name="priceRange" value="90-100k">
+            <label for="price90to100k">90,000 - 1,00,000</label><br>
+
+            <input type="checkbox" id="price100to200k" name="priceRange" value="100-200k">
+            <label for="price100to200k">1,00,000 - 2,00,000</label><br>
+
+
+            <br><br>
+            <h4>BRAND</h4>
+            <input type="checkbox" id="checkbox1" name="checkbox1" checked>
+            <label for="checkbox1">Samsung</label><br>
+
+            <br><br>
+            <h4>PROCESSORS NAME</h4>
+            <input type="checkbox" id="checkbox1" name="checkbox1">
+            <label for="checkbox1">Core i5</label><br>
+            <input type="checkbox" id="checkbox2" name="checkbox1">
+            <label for="checkbox1">Core i7</label><br>
+            <input type="checkbox" id="checkbox3" name="checkbox1">
+            <label for="checkbox1">Core i9</label>
+
+
+        </div>
+        <div class="main-section">
+            <div class="product" data-category="Windows Laptops" data-price="155990">
+                <div class="image">
+                    <img src="./images/Sam lap1.png" alt="">
+                </div>
+                <div class="description">
+                    <p class="heading">Samsung Galaxy Book3 Pro Intel 13th Gen i7 EvoTM 35.56cm(14") Dynamic Amoled 2X,
+                        3K Display, 120Hz, Ultra Thin & Light Laptop(16 GB/1 TB SSD/Windows 11/MS
+                        Office/Graphite/1.17Kg), NP940XFG-KC5IN</p>
+                    <span class="new-price"> ₹1,55,990</span><br>
+                    <span class="mrp">M.R.P : </span>
+                    <span class="old-price"> ₹1,94,990</span>
+                    <span class="discount">- 20%</span><br>
+                    <a href=""><button type="button">Add to Cart</button></a>
+                    <a href=""><button type="button" class="product-button" data-product="product1">Buy Now</button></a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="product" data-category="Ultra Thin Laptops" data-price="61499">
+                <div class="image">
+                    <img src="./images/Sam lap3.png" alt="">
+                </div>
+                <div class="description">
+                    <p class="heading">Samsung Galaxy Book2 (NP750) Intel 12th Gen core i5 39.6cm (15.6") FHD Thin &
+                        Light Laptop (8 GB/512 GB/Windows 11/MS Office/Backlit Keyboard/Finger Print
+                        Reader/Silver/1.55Kg), NP750XED-KC1IN</p>
+                    <span class="new-price"> ₹61,499</span><br>
+                    <span class="mrp">M.R.P : </span>
+                    <span class="old-price"> ₹83,990</span>
+                    <span class="discount">- 27%</span><br>
+                    <a href=""><button type="button">Add to Cart</button></a>
+                    <a href=""><button type="button" class="product-button" data-product="product2">Buy Now</button></a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="product" data-category="Windows Laptops" data-price="122990">
+                <div class="image">
+                    <img src="./images/Sam lap2.png" alt="">
+                </div>
+                <div class="description">
+                    <p class="heading">Samsung Galaxy Book3 360 Intel 13th Gen i7 EvoTM 39.6cm(15.6") Super Amoled
+                        2-in-1 Touchscreen Laptop (16 GB/512GB SSD/Windows11/MS Office/Backlit KB/Fingerprint
+                        Sensor/Graphite/1.46Kg),NP750QFG-KA1IN</p>
+                    <span class="new-price"> ₹1,22,990</span><br>
+                    <span class="mrp">M.R.P : </span>
+                    <span class="old-price"> ₹1,53,990</span>
+                    <span class="discount">- 20%</span><br>
+                    <a href=""><button type="button">Add to Cart</button></a>
+                    <a href=""><button type="button" class="product-button" data-product="product3">Buy Now</button></a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="product" data-category="Ultra Thin Laptops" data-price="101990">
+                <div class="image">
+                    <img src="./images/Sam lap4.png" alt="">
+                </div>
+                <div class="description">
+                    <p class="heading">Samsung [SmartChoice] Galaxy Book2 Pro Intel 12th Gen i7 EvoTM 33.78cm (13.3")
+                        AMOLED Ultra Thin & Light Laptop (16 GB/512 GB SSD/Win 11/MSO/Backlit KB/Fingerprint
+                        Sensor/Silver/0.87Kg), NP930XED-KB2IN</p>
+                    <span class="new-price"> ₹1,01,990</span><br>
+                    <span class="mrp">M.R.P : </span>
+                    <span class="old-price"> ₹1,39,990</span>
+                    <span class="discount">- 27%</span><br>
+                    <a href=""><button type="button">Add to Cart</button></a>
+                    <a href=""><button type="button" class="product-button" data-product="product4">Buy Now</button></a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="product" data-category="Windows Laptops" data-price="90599">
+                <div class="image last">
+                    <img src="./images/Sam lap5.png" alt="" width="400px" height="200px">
+                </div>
+                <div class="description">
+                    <p class="heading">Samsung 24 inches LED 1920 x 1080 Pixels Flat Computer Monitor - Full HD, Super
+                        Slim AH-IPS Panel - LF24T352FHWXXL, (Dark Blue, Gray)</p>
+                    <span class="new-price"> ₹90,599</span><br>
+                    <span class="mrp">M.R.P : </span>
+                    <span class="old-price"> ₹1,90,110</span>
+                    <span class="discount">- 40%</span><br>
+                    <a href=""><button type="button">Add to Cart</button></a>
+                    <a href=""><button type="button" class="product-button" data-product="product5">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <p class="page-p">Visit other pages:</p>
+        <div class="page-btn">
+            <span class="active">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#8594;</span>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!----------Footer-------------------->
+    <footer>
+        <div class="container1">
+            <div class="content_footer">
+                <div class="profile">
+                    <div class="logo_area">
+                        <img src="images/logo.png">
+                        <!-- <span class="logo_name">MiniStore</span> -->
+                    </div>
+                    <div class="desc_area">
+                        <p style="color: #fff;">
+                            Ministore, with its user-friendly interface and a wide range of cutting-edge tech gadgets,
+              home appliances, provides customers
+              with a smooth shopping experience, making it a go-to destination for tech enthusiasts and
+              consumers alike.
+                        </p>
+                    </div>
+                    <div class="social_media">
+                        <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                        <a href="#"><i class='bx bxl-facebook-square'></i></a>
+                        <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                        <a href="#"><i class='bx bxl-github'></i></a>
+                    </div>
+                </div>
+                <div class="service_area">
+                    <ul class="service_header">
+                        <li class="service_name">Services</li>
+                        <li><a href="#">Buying Guide</a></li>
+                        <li><a href="#">Payment Policy</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                    <ul class="service_header">
+                        <li class="service_name">Locations</li>
+                        <li><a href="#">Delhi</a></li>
+                        <li><a href="#">Mumbai</a></li>
+                        <li><a href="#">Dehradun</a></li>
+                        <li><a href="#">Punjab</a></li>
+                    </ul>
+                    <ul class="service_header">
+                        <li class="service_name">Get to know Us</li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Join Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="footer_bottom">
+                <div class="copy_right">
+                    <span>&copy; 2022 MiniStore</span>
+                </div>
+                <div class="tou">
+                    <a href="#">Terms of Use &nbsp; |</a>
+                    <a href="#">Privacy Policy &nbsp; | </a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <!--js for toggle menu-->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "300px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+
+    <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
+
+
+
+
+    <script>
+        // Select all elements with the "ion-icon" tag and store them in a NodeList called "stars"
+        const stars = document.querySelectorAll(".cp-rating ion-icon");
+
+        // Loop through the "stars" NodeList
+        stars.forEach((star, index1) => {
+            // Add an event listener that runs a function when the "click" event is triggered
+            star.addEventListener("click", () => {
+                // Loop through the "stars" NodeList Again
+                stars.forEach((star, index2) => {
+                    // Add the "active" class to the clicked star and any stars with a lower index
+                    // and remove the "active" class from any stars with a higher index
+                    index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
+                });
+            });
+        });
+    </script>
+
+
+
+
+
+    <!-- side bar k liye -->
+    <script>
+        const categoryCheckboxes = document.querySelectorAll('input[name="category"]');
+        const priceCheckboxes = document.querySelectorAll('input[name="priceRange"]');
+        const products = document.querySelectorAll('.product');
+
+        // Function to update product visibility
+        function updateProductVisibility() {
+            const selectedCategories = Array.from(categoryCheckboxes)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.value);
+
+            products.forEach(product => {
+                const category = product.getAttribute('data-category');
+
+                const categoryVisible = selectedCategories.includes(category);
+                product.style.display = categoryVisible ? 'block' : 'none';
+            });
+        }
+
+        // Add event listeners to checkboxes
+        categoryCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateProductVisibility);
+        });
+
+        // Initial update
+        updateProductVisibility();
+
+    </script>
+
+
+
+
+    <!-- popup -->
+
+
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" id="close-popup">&times;</span>
+            <h2 style="text-align: center;">Checkout Infromation</h2>
+            <form id="checkout-form">
+            <div class="sections">
+                <a href="#" id="personal-info-link">Personal Information</a>
+                <a href="#" id="billing-address-link">Billing Address</a>
+                <a href="#" id="payment-options-link">Payment Options</a>
+                <div class="section active" id="personal-info">
+                    <h3>Personal Information</h3>
+                    <!-- Full Name -->
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Your Full Name" required>
+
+                    <!-- Email Address -->
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+
+                    <!-- Phone Number -->
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                </div>
+
+                <div class="section active" id="billing-address">
+                    <h3>Billing Address</h3>
+                    <!-- Street Address -->
+                    <label for="street-address">Street Address:</label>
+                    <input type="text" id="street-address" name="street-address" placeholder="Your Street Address"
+                        required>
+
+                    <!-- City -->
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" placeholder="Your City" required>
+
+                    <!-- State -->
+                    <label for="state">State:</label>
+                    <input type="text" id="state" name="state" placeholder="Your State" required>
+
+                    <!-- ZIP Code -->
+                    <label for="zip-code">ZIP Code:</label>
+                    <input type="text" id="zip-code" name="zip-code" placeholder="Your ZIP Code" required>
+
+                    <!-- Country -->
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="usa">India</option>
+
+                        <!-- Add more countries as needed -->
+                    </select>
+                </div>
+
+                <div class="section active" id="payment-options">
+                    <h3>Payment Options</h3>
+                    <!-- Payment Method -->
+                    <label for="payment-method">Payment Method:</label>
+                    <select id="payment-method" name="payment-method" required>
+                        <option value="credit-card">Credit Card</option>
+                        <option value="cod">Cash on Delivery</option>
+                        <!-- Add more payment methods as needed -->
+                    </select>
+
+                    <!-- Credit Card Number -->
+                    <label for="card-number">Credit Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="Your Card Number" required>
+
+                    <!-- Expiry Date -->
+                    <label for="expiry-date">Expiry Date:</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+
+                    <!-- CVV -->
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+
+                </div>
+            </div>
+
+            <!-- order summary -->
+            <h3>Order Summary</h3>
+            <div class="order-summary">
+                <div class="summary-item">
+                    <p style="display: inline-block; margin-right: 8px;">Subtotal:</p>
+                    <span id="subtotal" style="display: inline-block;">0</span>
+                </div>
+                <div class="summary-item">
+                    <p style="display: inline-block; margin-right: 40px;">Shipping:</p>
+                    <span id="shipping" style="display: inline-block;">+0</span>
+                </div>
+                <div class="summary-item">
+                    <p style="display: inline-block; margin-right: 53px;">Tax:</p>
+                    <span id="tax" style="display: inline-block;">+0</span>
+                </div>
+                <div class="summary-item">
+                    <p style="display: inline-block; margin-right: 24px;">Total:</p>
+                    <span id="total" style="display: inline-block;">0</span>
+                </div>
+            </div>
+            <a href="samsung.html"><button type="submit" id="submit-button"
+                    onclick="window.alert('Purchase Successful')">Submit</button></a>
+            </form>
+        </div>
+    </div>
+
+    <script>// Get references to the form and submit button
+        const checkoutForm = document.getElementById("checkout-form");
+        const submitButton = document.getElementById("submit-button");
+        
+        // Add a submit event listener to the form
+        checkoutForm.addEventListener("submit", function (event) {
+            // Check the validity of the form
+            if (!checkoutForm.checkValidity()) {
+                // Prevent form submission if the form is not valid
+                event.preventDefault();
+                alert("Please fill in all required fields.");
+            }
+        });
+        
+        // You can also listen to changes in form fields to dynamically update the form validity
+        checkoutForm.addEventListener("change", function () {
+            if (checkoutForm.checkValidity()) {
+                submitButton.removeAttribute("disabled");
+            } else {
+                submitButton.setAttribute("disabled", "disabled");
+            }
+        });
+        </script>
+
+    <script>
+        // document.addEventListener("DOMContentLoaded", function () {
+
+        // Function to update the order summary based on product details
+        function updateOrderSummary(productDetails) {
+            // Calculate subtotal, shipping, tax, and total based on product details
+            const subtotal = productDetails.price * productDetails.quantity;
+            const shipping = 50; // You can calculate shipping here if needed
+            const tax = subtotal * 0.01; // 10% tax as an example
+            const total = subtotal + shipping + tax;
+
+
+            // Update the order summary elements with calculated values
+            document.getElementById("subtotal").textContent = subtotal;
+            document.getElementById("shipping").textContent = shipping;
+            document.getElementById("tax").textContent = tax;
+            document.getElementById("total").textContent = total;
+        }
+
+        // Event listeners for Buy Now buttons
+        const buyNowButtons = document.querySelectorAll(".description .product-button");
+        buyNowButtons.forEach(button => {
+            button.addEventListener("click", (event) => {
+
+                // Prevent the default form submission behavior
+                event.preventDefault();
+
+                // Get the product identifier from the data-product attribute
+                const productIdentifier = button.getAttribute("data-product");
+
+                // Fetch the product details and price based on the productIdentifier
+                const productDetails = getProductDetails(productIdentifier);
+
+                // Open the popup and show the "Personal Information" section by default
+                openPopup();
+                // showSection("personal-info");
+
+                // Update the order summary with the fetched product details
+                updateOrderSummary(productDetails);
+            });
+        });
+
+        // Function to fetch product details (replace this with your actual implementation)
+        function getProductDetails(productIdentifier) {
+
+            console.log("getProductDetails called with identifier:", productIdentifier); // Add this line to check if the function is called
+
+            // Simulated product details; replace this with your data retrieval logic
+            if (productIdentifier === "product1") {
+                return {
+                    name: "Samsung Galaxy Book3 Pro Intel",
+                    price: 155990,
+                    quantity: 1, // You can set the quantity based on user input if needed
+                    // Add other product details as needed
+                };
+            } else if (productIdentifier === "product2") {
+                return {
+                    name: "Samsung Galaxy Book2 (NP750)",
+                    price: 61499,
+                    quantity: 1,
+                    // Add other product details as needed
+                };
+            } else if (productIdentifier === "product3") {
+                return {
+                    name: "Samsung Galaxy Book3 360 Intel",
+                    price: 122990,
+                    quantity: 1,
+                    // Add other product details as needed
+                };
+            } else if (productIdentifier === "product4") {
+                return {
+                    name: "Samsung [SmartChoice] Galaxy Book2 Pro",
+                    price: 101990,
+                    quantity: 1,
+                    // Add other product details as needed
+                };
+            } else if (productIdentifier === "product5") {
+                return {
+                    name: "Samsung 24 inches LED 1920 x 1080 Pixels Flat Computer Monitor",
+                    price: 90599,
+                    quantity: 1,
+                    // Add other product details as needed
+                };
+            }
+
+        }
+
+        // Function to open the popup
+        function openPopup() {
+            // document.getElementById("popup").style.display = "block";
+            document.getElementById("popup").style.display = "block";
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+        // Event listener for the close button
+        const closePopupButton = document.getElementById("close-popup");
+        closePopupButton.addEventListener("click", () => {
+            closePopup();
+        });
+        // Get references to the section links
+        const personalInfoLink = document.getElementById("personal-info-link");
+        const billingAddressLink = document.getElementById("billing-address-link");
+        const paymentOptionsLink = document.getElementById("payment-options-link");
+
+        // Get references to the sections
+        const personalInfoSection = document.getElementById("personal-info");
+        const billingAddressSection = document.getElementById("billing-address");
+        const paymentOptionsSection = document.getElementById("payment-options");
+
+        // Function to show a section and hide others
+        function showSection(sectionToShow) {
+            // Hide all sections
+            personalInfoSection.style.display = "none";
+            billingAddressSection.style.display = "none";
+            paymentOptionsSection.style.display = "none";
+
+            // Show the selected section
+            if (sectionToShow === "personal-info") {
+                personalInfoSection.style.display = "block";
+            } else if (sectionToShow === "billing-address") {
+                billingAddressSection.style.display = "block";
+            } else if (sectionToShow === "payment-options") {
+                paymentOptionsSection.style.display = "block";
+            }
+        }
+
+        // Add click event listeners to the links
+        personalInfoLink.addEventListener("click", () => {
+            showSection("personal-info");
+        });
+
+        billingAddressLink.addEventListener("click", () => {
+            showSection("billing-address");
+        });
+
+        paymentOptionsLink.addEventListener("click", () => {
+            showSection("payment-options");
+        });
+
+        // Initially, show the "Personal Information" section by default
+        showSection("personal-info");
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
